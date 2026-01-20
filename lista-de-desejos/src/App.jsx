@@ -1,29 +1,36 @@
 import './App.css'
 import Items from './components/Items'
+import Add from './components/Add';
 
 function App() {
 
   const items = [
-    {id: 1, name: 'Headset', price:100},
-    {id: 2, name: 'Smartwatch', price:150},
-    {id: 3, name: 'Notebook', price: 2000},
-    {id: 4, name: 'Tablet', price: 900},
-    {id: 5, name: 'Smartphone', price: 2500},
+    {id: 1, name: 'Headset'},
+    {id: 2, name: 'Smartwatch'},
+    {id: 3, name: 'Notebook'},
+    {id: 4, name: 'Tablet'},
+    {id: 5, name: 'Smartphone'},
   ]
 
   return (
     
       <div className='app'>
-        <h1 className='title'>WishLista</h1>
-        
 
+        <h1 className='title'>WishList</h1>
+        
+        <form>
+          <input type='text' placeholder='Write here your wish...'></input>
+          <input type='submit' id='inputSearch' value='Add Item'></input>
+        </form>
+        
+        
         {items.map((item) => (
 
           <Items key={item.id} products={item}/>
           
         ))}
 
-        
+        <Add/>
       </div>
   )
 }

@@ -3,7 +3,6 @@ function Items({products}){
     return(
         <div>
             <h3><strong>Name: </strong>{products.name}</h3>
-            <p><strong>Price: </strong>{products.price}</p>
             <p><strong>Product Description: </strong> Produto vendido em nossa loja</p>
         </div>
     )
